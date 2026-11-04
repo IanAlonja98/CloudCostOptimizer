@@ -1,0 +1,13 @@
+# Terraform local files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+
+# Keys and credentials
+*.csv
+*.pem
+.env
+.aws/
+
