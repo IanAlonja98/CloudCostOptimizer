@@ -10,6 +10,9 @@ jobs:
   login-test:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "role name is ${AWS_ROLE_ARN##*/}"
+        env:
+          AWS_ROLE_ARN: ${{ secrets.AWS_ROLE_ARN }}
       - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
